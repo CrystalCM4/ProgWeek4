@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace PlayerStuff {
     public class Player : MonoBehaviour
@@ -54,7 +55,7 @@ namespace PlayerStuff {
         public void OnCollisionEnter(Collision enemy)
         {
             if (enemy.gameObject.CompareTag("Enemy")){
-                print("game over");
+                SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
             }
         }
     }
