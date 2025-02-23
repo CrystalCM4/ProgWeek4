@@ -17,12 +17,5 @@ namespace EnemyStuff {
             enemy.SetDestination(player.transform.position);
 
         }
-
-        public void OnCollisionEnter(Collision player)
-        {
-            if (player.gameObject.CompareTag("Player")){
-                print("game over");
-            }
-        }
     }
 }
